@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ht_admin?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+  servlet:
+    multipart:
+      # 设置 上传文件的大小
+      max-file-size: 10MB
+      # 设置 整个请求的大小
+      max-request-size: 15MB
+mybatis-plus:
+  type-aliases-package: com.example.springboot.pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    七牛云oss 配置
+qiniu:
+  accessKey:  # 
+  secretKey:  #
+  bucketName:  #
+  path: #
+
+
